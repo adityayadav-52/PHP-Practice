@@ -1,0 +1,78 @@
+<?php
+
+echo 'This is Aditya terminal';
+echo PHP_EOL;
+echo 'The Aditya Framework : Version 5.0';
+echo PHP_EOL;
+
+$commands =[
+'--help'=>'This is help command',
+'--v'=>'5.0',
+'--a'=>'for addition',
+'--s'=>'for subtraction',
+'--m'=>'for multiplication',
+'--d'=>'for division',
+'--r'=>'for remainder',
+'serve'=>'start the server'
+];
+
+foreach($commands as $key => $value){
+printf("%s\t\t:\t\t%s\n",$key,$value);
+}
+
+$output ='';
+if(isset($argv[1])){
+	$command = $argv[1];
+	echo "\e[H\e[J";
+	switch($command){
+	case '--v':
+		$output='5.0';
+		break;
+	
+	case '--a':
+		$x = readline('Enter a number 1 : ');
+		$y = readline('Enter a number 2 : ');
+		$output =$x+$y;
+	
+	break;
+	
+	case '--s':
+		$x = readline('Enter a number 1 : ');
+		$y = readline('Enter a number 2 : ');
+		$output =$x-$y;
+	
+	break;
+	
+	case '--m':
+	$x = readline('Enter a number 1 : ');
+	$y = readline('Enter a number 2 : ');
+	$output =$x*$y;
+	
+	break;
+	
+	case '--d':
+		$x = readline('Enter a number 1 : ');
+		$y = readline('Enter a number 2 : ');
+		$output =$x/$y;
+	
+	break;
+	
+	case '--r':
+		$x = readline('Enter a number 1 : ');
+		$y = readline('Enter a number 2 : ');
+		$output =$x%$y;
+	
+	break;
+	
+	case '--serve':
+		system(php -S localhost:8000);
+	
+	break;
+	
+	
+	default:
+		$output = 'Invalid command Supplied';
+	break;
+	}
+}
+echo $output;
