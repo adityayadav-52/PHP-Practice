@@ -1,0 +1,94 @@
+Introduction to Oops(Object Oriented Programming Structure) :-
+****************************************
+
+In earlier days, in order to write the bigest logic we used two Approachs to write the code :-
+1. mono-lithic : when we write the code in single script itself.
+2. poly-lithic : when we write the entire code as a group of small script, then it called as polylithic approach.
+	1. using functional approach
+	2. using Object Oriented approach
+	3. using modular approach
+	4. and other approach
+	These all approaches for writting the code, is called as progarmming paradigm or methodologies or descipline or
+	technique, programming mechanism.
+	
+What is Object Oriented programming system ?
+1. It is a programming paradigm or mechanism for developing software highly scalable application.
+
+Object Oriented programming Language :-
+Any programming Language which can provide oops support, with all features implemented by OOps that langauge is
+called as OOPL(Object Oriented programming Language).
+
+Eg :- C++, Java, C#, PHP, Python etc...
+
+Pillars of Object Oriented programming Language :-
+**********************************************
+1. Encapsulation
+2. Data Hiding
+3. Data Abstraction
+4. Abstraction
+5. Inheritence
+6. Has-Relationship
+7. is-Relationship
+8. Class and Object
+9. Polymorphism
+10. Dependency Programming
+11. Exception Handling
+
+
+After Object Oriented programming system has left its scope : it leaves some elements as a scrap. The elements are
+then re-used and converted into re-usable components are there re-usable components of oops are called as design
+pattern.
+There are total 23 design patterns( re-usable components ):-
+Design Patterns :-
+	Structural Pattern :
+		1. Decoder
+		2. Bridge
+		3. Adapter
+		4. Flyweight
+		5. Facade
+		6. Composite
+		7. Proxy
+		
+	Behavioural Pattern :
+		8. ChainOfResponsiblity
+		9. Observer
+		10. Command
+		11. State
+		12. Strategy
+		13. Meiator
+		14. Interpreter
+		15. Iterator
+		16. Template Method
+		17. Momento
+		18. Visitor
+		
+	Creational Pattern
+		19. Builder
+		20. Prototype
+		21. Abstract Factory
+		22. Factory Method
+		23. Singleton
+		
+		
+These are written by four writers and called as Gang-Of-Four(Gang-of-4)
+
+
+Advantages of oops :-
+**************************
+1. Easy to Understand
+2. Bottom to Top Approach
+3. Security
+4. Reusability
+5. Scope and Memory Management
+6. Standardization
+
+
+1. Is PHP a Object Oriented Language? // Yes in overview --- No in Detail
+2. Is JAV a Object Oriented Language? // Yes in overview --- No in Detail
+3. Is C#(.net) a Object Oriented Language? // Yes in overview --- No in Detail
+4. Is PYTHON a Object Oriented Language? // Yes in overview --- No in Detail
+5. Is C++ a Object Oriented Language? // Yes in overview --- No in Detail
+6. Is smalltalk a Object Oriented Language? // Yes in overview --- Yes in Detail
+
+Any programming langauge is set to be fully oops based if it does not primtive data type. and If it has then it 
+should does not basis of Class and Object.

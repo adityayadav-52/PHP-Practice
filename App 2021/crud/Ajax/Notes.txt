@@ -1,0 +1,103 @@
+AJAX ---:
+
+AJAX stands for Asynchronous Javascript and XML(JSON).
+AJAX will work only under live server enviornment.
+Because AJAX responds to the send by server itself.
+This server can be like live server.
+XAMPP , Laragon server or CLI Server.
+AJAX is useful if we want to perform any live cahnge without refresh within the web page then it's useful.
+
+Syntax :
+
+Using http request object using javascript(Echma or Advance).
+Using JQuery with AJAX.
+Fetch API.
+
+Getting started with AJAX :->
+
+1. We can run ajax request only after, when each and every element of, html is generated.
+2. Because, if we target any id or class and that element is not generate due to internet problem in that scenario we will get null.
+
+$(document).ready(function(){
+	
+	});
+	
+	
+$("selector").method(function(){
+
+	});
+	
+b --> id=btn click --> paragraph --> para --> hii
+$(document).ready(function(){
+	$("btn").click(function(){
+		$("para").text("Hello...!");
+		//or
+		$("para").html("Hello...!");
+	});
+});
+	
+document.getElementById()  #
+document.getElementsByClassName()  .
+document.getElementsByTagName()  tag name
+document.getElementByName()  name attribute
+querySelectorAll()  anything
+
+<h1 id="h" > This is Heading </h1>
+$("#h")
+<h1 id="h" > This is Heading </h1>
+$(".h")
+$("h1")
+<p id="para"> This is paragraph
+	<span class="font">
+		<b>This is Bold</b>
+	</span>
+</p>
+
+$("#para .font b")
+
+.innerHTML => .html() get put => .html("Hello..")
+.innerTEXT => .text() get .text() => .text("Hello..")
+.src => .attr('src') get .attr('src',"1.png")
+.value => .val() get set .val("hello..")
+.title => .attr('title') set => .attr('title',"Aditya Yadav")
+
+Events :-
+*****************
+
+onclick => .click()					| 		onclick => .on("click")
+ondblclick => .dblclick()			| 		ondblclick => .on("dblclick")
+onkeyup => .keyup()					| 		onkeyup => .on("keyup")
+onkeypress => .keypress()			| 		onkeypress => .on("keypress")
+onchange => .change()				| 		onchange => .on("change")
+onmouseover => .mouseover()			| 		onmouseover => .on("mouseover")
+onmouseleave => .mouseleave()		| 		onmouseleave => .on("mouseleave")
+onload => .load()					|		onload => .on("load")
+onsubmit => .submit()				|		onsubmit => .on("submit")
+
+
+AJAX Syntax :-
+
+$.ajax({
+	url:"http://localhost:8000/getEmp.php/emp/",
+	type:"POST",
+	data:{key:value},
+	dataType:"jso | formdata | jsonp | datastring",
+	success:function(response){
+	},
+	beforeSend:function(response){
+	},
+	error:function(xhr,error){
+	},
+	complete:function(response){	
+	},
+	cache:true|false,
+	async:true|false,
+
+});
+
+
+How to verify ajax request is running or not.
+**********************************************
+goto console menu ---> network tab
+select xhr/fetch
+see the response using preview response.

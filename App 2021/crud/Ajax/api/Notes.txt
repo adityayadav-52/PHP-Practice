@@ -1,0 +1,218 @@
+1. What is Api ?
+2. What is Web-services ?
+3. What is Web-Api ?
+4. What is soap ?
+5. What is RESR ?
+6. What is Postman ?
+7. What is difference between REST & SOAP ?
+
+
+
+** What is Api :-
+Api stands for Application Programing Interface.
+Api is a Mechanism by using which one type Application can communicate with another application.
+In general Api is a very big topic.
+
+Api are used by different Application to data, from one plateform to another plateform Worldmeter.com Corona virus Api.
+Any Application A,B,C,D,E,F can utilise the Api of Worldmeter.com to get live update of corona ( Api is plateform independent ).
+
+1. InterOperability : Conversion of one type of language to some common language so that data can be exchange without directly converting the one language to another language.
+
+(OR)
+
+InterOperability refers to sharing data, from one Application to Another Application without changing native language, by means of some common Interconversion language.
+
+(OR)
+
+Sharing of data from one Application to another Application without directly converting the native language is called InterOperability.
+
+Ex:->
+Android ----> JSON ----> JAVA
+Python ----> JSON ----> JAVA
+Python ----> JSON ----> PHP
+PHP ----> JSON ----> SQL
+
+Main feature of InterOperability is Plateform Independent Nature.
+PHP --(Serialization/JSON Encoding)--> JSON --(Deserialization/ JSON Decode)--> SQL
+
+Serialization/JSON Encoding :-> Converting one type of programming language to JSON object.
+Deserialization/JSON Encoding :-> Converting JSON type to one Type of data-tye of programming language.
+
+Ex:->
+php -----> json_encode() -----> json (Serialization)
+Associative Array
+
+json -----> json_decode() -----> Associative Array.(Deserialization)
+
+
+
+** What is Web-services :-> 
+	Any types of services access over the Internet is termed as Web-services, it can be any type of service and can use any protocol.
+
+** What is Web-Api :->
+	The Api which can be accessed only via web Interface or Interface as a medium is called as Web-Api.
+	
+	Java Application --------------> Oracle Local DB
+							Local Driver Api
+	
+	Game Application --------------> Sound Driver
+							Audio Api
+							
+Every web-api is Api but not every Api is web-api.
+
+
+
+** What is SOAP-:
+	It is type of web-api which cann be used, to transport data/represent the data, in form SimpleObject Access Protocol which used XML Data Representation.
+	
+	Eg:->
+	<?xml:nmps="version/xml-domucent-4">
+		<xml:Envelope>
+			<Employee>
+				<user id="1">
+					<email>aadi@gmail.com</email>
+					<password>12345</password>
+				</user>
+			</Employee>
+		</Envelope>
+	</xml>
+	
+Used for very Haevy Data Transmission.
+1. SOAP is highly scalable
+2. SOPA is secure, because you have access nth node for access real data node.
+3. SOAP Architecture can very deep that it can be very complex to handle.
+
+
+
+** What is REST :->
+	REST stands for representational state transfer.
+	It is type of Web-Api which works under http protocol.
+	its representation is always, In JSON format.
+	It will very light weight.
+	Easy to Handle, due to organise data structure in form of key and value pairs.
+	REST api works on the basis oF HTTP METHOD
+	
+	Request : GET
+	Request : POST
+	Request : Options
+	Request : PATCH
+	Request : PUT
+	Request : DELET
+	Request : LOCK
+	Request : HEAD
+	Request : COPY
+	Request : UNLOCK
+	Request : UNLINK
+	Request : LINK
+	Request : VIEW
+	Request : PURGE
+	Request : PROPFIND
+	
+	{
+	"type":"GET",
+	"version":"1.0.1",
+	"status":true,
+	"error":false,
+	"code":200,
+	"data":[
+			{"empid":1001,"name":"ravi","salary":10000},
+			{"empid":1002,"name":"prabhas","salary":70000},
+			{"empid":1003,"name":"allu","salary":80000},
+			{"empid":1004,"name":"ram","salary":30000},
+			{"empid":1005,"name":"aditya","salary":20000}
+		]
+	"keyword",[],
+	}
+	
+	
+	
+	
+	
+What is Postman:->
+		Postman is a client tool to send the pure http request to the server and test the Api's. Postman has set of http method to Intersepct the REST Api's by using GET, POST, PUT, PATCH, DELETE, LINK, UNLINK, LOCK, UNLOCK, .... etc and also has different payloads which can be bined as header and body content.
+		
+		
+What is difference b/w REST & SOAP ?
+	1. REST : Representational State Transfer.
+	1. SOAP : Simple Object Access Protocol.
+	
+	2. REST : uses Lower Bandwith.
+	2. SOAP : uses Higher Bandwith.
+	
+	3. REST : It follows web-standards related to http protocol.
+	3. SOAP : It follows xml structure and conventions based o envelope and web standards.
+	
+	4. REST : Less Security.
+	4. SOAP : Higher Security.
+	
+	5. REST : Easy to handle, easy to deserialise and serialisation.
+	5. SOAP : Very difficult to handle.
+	
+	6. REST : data representation is in json,yml.
+	6. SOAP : data representation is in XML.
+	
+	
+Api Related Terms :- 
+1. http method : these are the set of methods which are define to perform some unique operation.
+	In Rest Api-- http methos are equivalent to DB Operation.
+	
+	C : create the data HTTP/1.1 POST
+	R : read the data HTTP/1.1 GET
+	U : update the data HTTP/1.1 PUT AND PATCH
+		[ PUT : full update ]
+		[ PATCH : partial update ]
+		
+	D : delete the data HTTP/1.1 DELETE
+	
+	http has two version -- 1.1 & 2.1(https)
+	
+	
+headers : headers are the type of payloads(information) attached to the request before data.
+		1. Headers can contain information like, http status : 200, 404, 500.
+		2. Headers has contant information like contant-type : text/html, application/json, Image/jpeg all these are called as MIME types.
+		3. Headers has allowed methods : GET, POST,.....
+		4. Headers can be used to check if request are Authentic or not.
+		5. Headers can be used to enable cors policy (content origin request security policy).
+		
+Body content : It reffers to form data supplied from the form off any client like Postman.
+	Types of Body data :->
+	1. formdata
+	2. urlencoded data
+	3. www-encoded data
+	4. raw data : json
+	
+	
+How to make Api in php :-
+
+Array
+(
+    [DOCUMENT_ROOT] => C:\laragon\www\App 2021\crud\api
+    [REMOTE_ADDR] => ::1
+    [REMOTE_PORT] => 60713
+    [SERVER_SOFTWARE] => PHP 7.4.19 Development Server
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_NAME] => localhost
+    [SERVER_PORT] => 5000
+    [REQUEST_URI] => /api.php
+    [REQUEST_METHOD] => GET
+    [SCRIPT_NAME] => /api.php
+    [SCRIPT_FILENAME] => C:\laragon\www\App 2021\crud\api\api.php
+    [PHP_SELF] => /api.php
+    [HTTP_HOST] => localhost:5000
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_SEC_CH_UA] => " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Windows"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => none
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8,tr;q=0.7,hi;q=0.6,fil;q=0.5,ar;q=0.4
+    [REQUEST_TIME_FLOAT] => 1644036517.8182
+    [REQUEST_TIME] => 1644036517
+)
