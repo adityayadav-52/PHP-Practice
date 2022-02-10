@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.'/api/functions.php';
 
+
 ?>
 <html>
     <head></head>
@@ -10,11 +11,15 @@ require_once __DIR__.'/api/functions.php';
            Email:<input type="email" id="email"><br/><br/>
             <input type ="button" value="submit" id="submit">
             <input type ="reset"  name="reset">
+            <input type="button" value="update" id="update">
 </form>
 <table border="1" width="100%">
     <tr>
+        <th>ID</th>
         <th>NAME</th>
         <th>EMAIL</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
     </tr>
     <tbody id="records">
     </tbody>
@@ -60,6 +65,8 @@ function load_emp_data(){
                 <td>${emp.id}</td>
                 <td>${emp.name}</td>
                 <td>${emp.email}</td>
+                <td><a href="javascript:handleEdit($'{emp.id}')" >Edit</a></td>
+                <td><a href="javascript:handleDelete($'{emp.id}')" >Delete</a></td>
             </tr>`;
                 });
 
@@ -94,6 +101,33 @@ function insert_emp_data(name,email){
             load_emp_data();
         }
     })
+}
+
+function handleDelete(id){
+
+}
+function handleEdit(id){
+    $("#update").show();
+    $("#submit").hide();
+    get_emp_data(id);
+}
+
+function get_emp_data(id){
+    $.ajax({
+        url : "<?php echo url('api/getOneEmp.php')  ?>",
+        type : "POST",
+        data : {
+            'id':id
+        },
+        success : function(response){
+            if(response.status=true && response.code=200){
+                console.log(window.data);
+            }
+            else{
+                window.alert(response.message);
+            }
+        }
+    });
 }
 
 </script>

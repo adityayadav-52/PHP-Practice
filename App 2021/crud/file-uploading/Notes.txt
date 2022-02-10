@@ -1,0 +1,6 @@
+File Uploading:-
+    file uploading does not mean the uploading of the medias to, database.
+    It is because the database like mysql, oracle are capable of uploading the data in form of text formate.
+    Even though if you want to upload the data (other than text such that) it has sum media related mime type then we go for, large text datatype, or BLOB object.
+
+    Note you can upload the image to the database where large amount of data is a constraint like mongodb, S3 ( simple storage service ) bucket (AWS).
