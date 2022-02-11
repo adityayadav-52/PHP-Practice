@@ -4,3 +4,62 @@ File Uploading:-
     Even though if you want to upload the data (other than text such that) it has sum media related mime type then we go for, large text datatype, or BLOB object.
 
     Note you can upload the image to the database where large amount of data is a constraint like mongodb, S3 ( simple storage service ) bucket (AWS).
+
+
+In order to upload the data in a server using PHP :-
+1. Make sure your php allowes file uploading feature 
+    php.ini chech allow_file_uploading : on
+    While uploading data, youa can upload max to max 20 files at once and each file size can be 8MB post data.
+    But if you want to increase this limit by going to php.ini and modifying the setting.
+
+How to check php.ini information :-
+***********************************
+1. phpinfo() : it holds the everything about PHP(configuration, settings, versions etc....), (via coding).
+2. php.ini manually
+
+How browser will upload file to the server.
+1. In order to upload the file :-
+    method : POST
+    form : enctype : multipart/form-data
+    input type : file
+
+    file : save_file_path = 'C:/laragon/tmp'
+
+    How to change this default path.
+    goto php.ini
+    upload_tmp_dir = 'C:/laragon/tmp'
+        if it is empty it will use system  temp (%temp%)
+        C:\Users\adity\AppData\Local\Temp
+
+
+browser -----> http request ----> (formdata) ----> server (tmp folder)
+
+Follow three steps for file uploading :-
+
+1. $_FILES : 2D array
+            1. name : name of the file
+            2. size : file size
+            3. error : any error occured during uploading not related to file
+            4. type : file type
+            5. tmp_name : tmp location where file is uploaded.
+
+2. use function move_uploaded_file($tmplocation,$newlocation);
+where file is finally uploaded.
+
+3. Send the uploaded file name to the db.
+
+
+
+Task :-
+gallery :
+    id file
+    1. 1.png
+
+uploads :
+    1.png
+
+    $filenames = select('file')->table('gallery')->allRecords();
+
+    forEach($filenames as $images){
+        echo "<img src='uploads/{$images["file"]}'>";
+    }
